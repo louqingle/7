@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>许昌科技学校校园助手</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:"Microsoft YaHei",sans-serif;
+    background:#f5f7fb;
+    color:#333;
+}
+header{
+    background:linear-gradient(135deg,#0057b8,#0084ff);
+    color:white;
+    padding:30px 20px;
+    text-align:center;
+}
+header h1{
+    font-size:36px;
+    margin-bottom:10px;
+}
+header p{
+    font-size:16px;
+    opacity:0.95;
+}
+nav{
+    background:#003e86;
+    padding:12px;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+nav ul{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    list-style:none;
+}
+nav ul li{
+    margin:5px 12px;
+}
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+.hero{
+    height:360px;
+    background:url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1400&q=80') center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    text-shadow:0 2px 8px rgba(0,0,0,.6);
+}
+.hero h2{
+    font-size:42px;
+}
+.container{
+    width:95%;
+    max-width:1200px;
+    margin:30px auto;
+}
+.section-title{
+    font-size:28px;
+    color:#0057b8;
+    margin-bottom:20px;
+    border-left:6px solid #0057b8;
+    padding-left:12px;
+}
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+.card:hover{
+    transform:translateY(-5px);
+}
+.card img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+}
+.card-content{
+    padding:18px;
+}
+.card h3{
+    color:#0057b8;
+    margin-bottom:10px;
+}
+.card p{
+    color:#666;
+    line-height:1.6;
+}
+.info-box{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    margin-top:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+.info-box ul{
+    line-height:2;
+    padding-left:20px;
+}
+.query-box{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+}
+.query-box input{
+    flex:1;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+.query-box button{
+    padding:12px 20px;
+    background:#0057b8;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+.chat{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+.chat-box{
+    height:220px;
+    overflow-y:auto;
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:10px;
+    margin-bottom:10px;
+}
+.message{
+    margin:10px 0;
+}
+.user{
+    text-align:right;
+    color:#0057b8;
+}
+.bot{
+    text-align:left;
+    color:#009688;
+}
+footer{
+    background:#002d63;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>许昌科技学校校园助手</h1>
+    <p>智慧校园 · 学习服务 · 校园生活一站式平台</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#about">学校简介</a></li>
+        <li><a href="#news">校园新闻</a></li>
+        <li><a href="#major">专业介绍</a></li>
+        <li><a href="#service">校园服务</a></li>
+        <li><a href="#assistant">AI助手</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h2>欢迎来到许昌科技学校</h2>
+</section>
+
+<div class="container">
+
+    <section id="about">
+        <h2 class="section-title">学校简介</h2>
+        <div class="info-box">
+            <p>
+                许昌科技学校（许昌市第五高级中学）创建于1958年，
+                是许昌市教育局直属公办全日制学校，
+                首批国家级重点中专。学校占地300余亩，
+                建筑面积10万余平方米，实施职业教育与普通高中教育双轨办学。
+            </p>
+            <br>
+            <ul>
+                <li>🏫 创建时间：1958年</li>
+                <li>📚 在校生：6600余人</li>
+                <li>🎓 办学类型：职业教育 + 普通高中</li>
+                <li>💻 特色专业：计算机、电商、机电、艺术设计</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="news">
+        <h2 class="section-title">校园新闻</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80">
+                <div class="card-content">
+                    <h3>技能大赛再创佳绩</h3>
+                    <p>学校师生在省级职业技能大赛中获得多项一等奖。</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80">
+                <div class="card-content">
+                    <h3>人工智能实训中心启用</h3>
+                    <p>全新AI实训室投入使用，提升学生数字化技能。</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80">
+                <div class="card-content">
+                    <h3>校企合作项目签约</h3>
+                    <p>学校与多家企业共建实习与就业基地。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="major">
+        <h2 class="section-title">热门专业</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800&q=80">
+                <div class="card-content">
+                    <h3>计算机应用</h3>
+                    <p>网页设计、程序开发、办公自动化等方向。</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=800&q=80">
+                <div class="card-content">
+                    <h3>电子商务</h3>
+                    <p>直播电商、网店运营、新媒体营销。</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1537432376769-00aabcfe0c45?auto=format&fit=crop&w=800&q=80">
+                <div class="card-content">
+                    <h3>机电技术应用</h3>
+                    <p>智能制造、设备维护与自动化控制。</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80">
+                <div class="card-content">
+                    <h3>艺术设计</h3>
+                    <p>平面设计、UI设计、视觉创意制作。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="service">
+        <h2 class="section-title">校园服务</h2>
+        <div class="grid">
+            <div class="info-box">
+                <h3>📅 课程表查询</h3>
+                <div class="query-box">
+                    <input type="text" id="classInput" placeholder="输入班级，如：23计应1班">
+                    <button onclick="queryClass()">查询</button>
+                </div>
+                <p id="classResult" style="margin-top:10px;color:#0057b8;"></p>
+            </div>
+
+            <div class="info-box">
+                <h3>📊 成绩查询</h3>
+                <div class="query-box">
+                    <input type="text" id="scoreInput" placeholder="输入学号">
+                    <button onclick="queryScore()">查询</button>
+                </div>
+                <p id="scoreResult" style="margin-top:10px;color:#0057b8;"></p>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>🗺 校园功能区</h3>
+            <ul>
+                <li>教学楼 A 区</li>
+                <li>实训中心</li>
+                <li>图书馆</li>
+                <li>学生餐厅</li>
+                <li>学生公寓</li>
+                <li>体育运动场</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="assistant">
+        <h2 class="section-title">AI 校园助手</h2>
+        <div class="chat">
+            <div class="chat-box" id="chatBox">
+                <div class="message bot">您好，我是许昌科技学校 AI 校园助手，请输入问题。</div>
+            </div>
+
+            <div class="query-box">
+                <input type="text" id="userInput" placeholder="例如：图书馆几点开放？">
+                <button onclick="sendMessage()">发送</button>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>© 2026 许昌科技学校校园助手 | 智慧校园服务平台</p>
+</footer>
+
+<script>
+function queryClass(){
+    const cls=document.getElementById('classInput').value;
+    document.getElementById('classResult').innerText=
+        cls?`已为 ${cls} 查询到本周课程表（演示数据）`:"请输入班级名称";
+}
+
+function queryScore(){
+    const id=document.getElementById('scoreInput').value;
+    document.getElementById('scoreResult').innerText=
+        id?`学号 ${id}：语文 86，数学 92，英语 88（演示数据）`:"请输入学号";
+}
+
+function sendMessage(){
+    const input=document.getElementById('userInput');
+    const text=input.value.trim();
+    if(!text) return;
+
+    const box=document.getElementById('chatBox');
+    box.innerHTML += `<div class="message user">${text}</div>`;
+
+    let reply="请联系学校办公室获取更详细信息。";
+
+    if(text.includes('图书馆')){
+        reply="图书馆开放时间：8:00 - 21:00。";
+    }else if(text.includes('专业')){
+        reply="学校热门专业包括：计算机应用、电子商务、机电技术应用、艺术设计。";
+    }else if(text.includes('宿舍')){
+        reply="学生公寓实行封闭式管理，配备空调与热水设施。";
+    }else if(text.includes('地址')){
+        reply="学校位于河南省许昌市。";
+    }
+
+    box.innerHTML += `<div class="message bot">${reply}</div>`;
+    box.scrollTop=box.scrollHeight;
+    input.value="";
+}
+</script>
+
+</body>
+</html>
